@@ -58,12 +58,22 @@
   flex-direction: row;
   width: 40%;
 }
-.week-days-details{
+
+.week-days-details {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   margin-top: 0.5rem;
+}
+
+.hamburger-icon {
+  margin-right: 1.5rem !important;
+}
+
+.nav-bar-container {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -72,13 +82,13 @@
   }
 
   .driver-names {
-  margin-top: 0;
-  width: 100%
+    margin-top: 0;
+    width: 100%
   }
 
   .driver-minutes {
-  margin-top: 0;
-  display: none;
+    margin-top: 0;
+    display: none;
   }
 
   .driver-details {
@@ -88,11 +98,20 @@
     justify-content: space-between
   }
 
-  .week-days-details{
+  .week-days-details {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
-  margin-top: 2rem;
-}
+    margin-top: 2rem;
+  }
+
+  .hamburger-icon {
+    margin-right: 1rem !important;
+  }
+
+  .nav-bar-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
