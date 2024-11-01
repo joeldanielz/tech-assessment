@@ -2,9 +2,16 @@ import { AppBar, Box, IconButton } from '@mui/material';
 import MenuIcon from "@mui/icons-material/Menu";
 import React from 'react';
 
-export default function NavBar() {
-    return (
-        <Box
+interface Props {
+  setIsHamburgerOpen: (isHamburgerOpen: boolean) => void;
+}
+
+export default function NavBar(props: Props) {
+  const handleOpen = () => {
+    props.setIsHamburgerOpen(true);
+  };
+  return (
+    <Box
       sx={{
         display: "flex",
         minHeight: "7vh",
@@ -34,10 +41,10 @@ export default function NavBar() {
               flex: 50,
             }}
           >
-            {/* Only show button on mobile */}
             <IconButton
               size="large"
               onClick={() => {
+                handleOpen();
               }}
               sx={{
                 color: "white",
@@ -46,7 +53,7 @@ export default function NavBar() {
             >
               <MenuIcon />
             </IconButton>
-            <a href="/" style={{textDecoration: "none", color:"white"}}>
+            <a href="/" style={{ textDecoration: "none", color: "white" }}>
               <h1>Logistics UK</h1>
             </a>
           </Box>
@@ -60,5 +67,5 @@ export default function NavBar() {
         </Box>
       </AppBar>
     </Box>
-    );
+  );
 };
