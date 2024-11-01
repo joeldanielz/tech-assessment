@@ -32,7 +32,48 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.week-days-worked {
+  display: flex;
+}
+
+.driver-names {
+  display: flex;
+  width: 30%
+}
+
+.driver-minutes {
+  width: 25%
+}
+
+.driver-details {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .week-days-worked {
+    display: none;
+  }
+
+  .driver-names {
+    width: 100%
+  }
+
+  .driver-minutes {
+    display: none;
+  }
+
+  .driver-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between
   }
 }

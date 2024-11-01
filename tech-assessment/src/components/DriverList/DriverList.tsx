@@ -44,31 +44,32 @@ export default function DriverList() {
                                         justifyContent: "space-between"
                                     }}
                                 >
-                                    <Box sx={{
-                                        width: "30%",
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "space-between"
-                                    }}>
+                                    <Box
+                                        className="driver-names"
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "space-between",
+                                        }}>
                                         <Typography fontWeight={"bold"}>{driver.forename} {driver.surname}</Typography>
                                         <Typography>{driver.vehicleRegistration}</Typography>
                                     </Box>
-                                    <Box sx={{
-                                        width: "25%",
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "end"
-                                    }}>
+                                    <Box
+                                        className="driver-minutes"
+                                        sx={{
+                                            flexDirection: "row",
+                                            justifyContent: "end"
+                                        }}>
                                         <Typography>{calculateMinutes(driver.traces)} minutes</Typography>
                                     </Box>
                                     <Box
-                                     sx={{
-                                        width: "45%",
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center"
-                                    }}>
-                                        <WeekDaysWorked traces={driver.traces}/>
+                                        className="week-days-worked"
+                                        sx={{
+                                            width: "45%",
+                                            flexDirection: "row",
+                                            justifyContent: "center"
+                                        }}>
+                                        <WeekDaysWorked traces={driver.traces} />
                                     </Box>
 
 
@@ -77,10 +78,22 @@ export default function DriverList() {
                                     minWidth: "80vw",
                                     display: "flex",
                                     flexDirection: "column",
-                                    textAlign: "start"
                                 }}>
-                                    <Typography fontWeight={"bold"}>{driver.forename} {driver.surname}</Typography>
-                                    <Typography>{driver.vehicleRegistration}</Typography>
+                                    <Box className="driver-details">
+                                        <Typography fontWeight={"bold"} sx={{ marginRight: "0.5rem" }}>Driver name:</Typography>
+                                        <Typography>{driver.forename} {driver.surname}</Typography>
+                                    </Box>
+                                    <Box className="driver-details">
+                                        <Typography fontWeight={"bold"} sx={{ marginRight: "0.5rem" }}>Vehicle Registration:</Typography>
+                                        <Typography sx={{ textAlign: "start" }}>{driver.vehicleRegistration}</Typography>
+                                    </Box>
+                                    <Box className="driver-details">
+                                        <Typography fontWeight={"bold"} sx={{ marginRight: "0.5rem" }}>Minutes of activity:</Typography>
+                                        <Typography sx={{ textAlign: "start" }}>{calculateMinutes(driver.traces)}</Typography>
+                                    </Box>
+                                    <Box className="driver-details">
+                                        <WeekDaysWorked traces={driver.traces} />
+                                    </Box>
                                 </AccordionDetails>
                             </Accordion>
                         )
