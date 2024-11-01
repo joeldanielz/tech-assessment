@@ -72,11 +72,13 @@
   }
 
   .driver-names {
-    width: 100%
+  margin-top: 0;
+  width: 100%
   }
 
   .driver-minutes {
-    display: none;
+  margin-top: 0;
+  display: none;
   }
 
   .driver-details {
