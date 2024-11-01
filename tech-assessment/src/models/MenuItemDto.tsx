@@ -1,4 +1,4 @@
 export type MenuItemDto = {
-    Title: string;
-    Url: string;
+    title: string;
+    url: string;
 }

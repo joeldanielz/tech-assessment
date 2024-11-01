@@ -1,5 +1,5 @@
 import { MenuItemDto } from "./MenuItemDto"
 
-export type DriverTracesActivityDto = {
+export type MenuDto = {
     data: MenuItemDto[]
 }

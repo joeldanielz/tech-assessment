@@ -1,5 +1,5 @@
 export type DriverTracesActivityDto = {
-    StartTime: string;
-    Type: string;
-    Duration: number;
+    startTime: string;
+    type: string;
+    duration: number;
 }
