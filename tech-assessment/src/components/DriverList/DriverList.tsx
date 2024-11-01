@@ -91,7 +91,8 @@ export default function DriverList() {
                                         <Typography fontWeight={"bold"} sx={{ marginRight: "0.5rem" }}>Minutes of activity:</Typography>
                                         <Typography sx={{ textAlign: "start" }}>{calculateMinutes(driver.traces)}</Typography>
                                     </Box>
-                                    <Box className="driver-details">
+                                    <Box className="week-days-details" sx={{
+                                    }}>
                                         <WeekDaysWorked traces={driver.traces} />
                                     </Box>
                                 </AccordionDetails>

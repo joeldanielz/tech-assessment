@@ -43,11 +43,13 @@
 }
 
 .driver-names {
+  margin-top: 0.7rem;
   display: flex;
   width: 30%
 }
 
 .driver-minutes {
+  margin-top: 0.7rem;
   width: 25%
 }
 
@@ -55,6 +57,13 @@
   display: flex;
   flex-direction: row;
   width: 40%;
+}
+.week-days-details{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -76,4 +85,12 @@
     width: 100%;
     justify-content: space-between
   }
+
+  .week-days-details{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  margin-top: 2rem;
+}
 }
