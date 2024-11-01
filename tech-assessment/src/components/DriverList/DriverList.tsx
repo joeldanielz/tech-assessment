@@ -6,6 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { DriverTracesActivityDto } from '../../models/DriverTracesActivityDto';
 import { trace } from 'console';
 import { DriverTracesDto } from '../../models/DriverTracesDto';
+import WeekDaysWorked from './WeekDaysWorked';
 
 export default function DriverList() {
     const [drivers, setDrivers] = useState<DriverDto[]>(Drivers.data);
@@ -31,7 +32,7 @@ export default function DriverList() {
                 <CardContent>
                     {drivers.map((driver, idx) => {
                         return (
-                            <Accordion sx={{ backgroundColor: "#f5f5f5", color: 'black' }}>
+                            <Accordion key={'driver-accord-' + idx} sx={{ backgroundColor: "#f5f5f5", color: 'black' }}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel1-content"
@@ -59,6 +60,15 @@ export default function DriverList() {
                                         justifyContent: "end"
                                     }}>
                                         <Typography>{calculateMinutes(driver.traces)} minutes</Typography>
+                                    </Box>
+                                    <Box
+                                     sx={{
+                                        width: "45%",
+                                        display: "flex",
+                                        flexDirection: "row",
+                                        justifyContent: "center"
+                                    }}>
+                                        <WeekDaysWorked traces={driver.traces}/>
                                     </Box>
 
 
