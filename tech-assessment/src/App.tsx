@@ -23,8 +23,8 @@ function App() {
         sx={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between",
-          marginX: "2rem"
+          justifyContent: "center",
+          marginX: "2rem",
         }}>
         <DriverList />
       </Box>

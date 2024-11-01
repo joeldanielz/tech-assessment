@@ -22,7 +22,7 @@ export default function NavBar(props: Props) {
       <AppBar
         sx={{
           borderBottom: 1,
-          backgroundColor: "rgba(0,0,0,0.8)",
+          backgroundColor: "rgba(255,255,255, 1)",
         }}
         position="static"
       >
@@ -49,13 +49,12 @@ export default function NavBar(props: Props) {
                 handleOpen();
               }}
               sx={{
-                color: "white",
                 marginRight: "2rem"
               }}
             >
               <MenuIcon />
             </IconButton>
-            <a href="/" style={{ textDecoration: "none", color: "white", marginTop:"1.5rem", marginBottom:"1.5rem" }}>
+            <a href="/" style={{ textDecoration: "none", color: "white", marginTop: "1.5rem", marginBottom: "1.5rem" }}>
               <img src={logo} />
             </a>
           </Box>
