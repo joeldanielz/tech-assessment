@@ -27,13 +27,13 @@ export default function NavBar(props: Props) {
         position="static"
       >
         <Box
+          className="nav-bar-container"
           sx={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
             alignItems: "center",
             marginY: "0.5rem",
-            paddingX: "3rem",
           }}
         >
           <Box
@@ -44,12 +44,10 @@ export default function NavBar(props: Props) {
             }}
           >
             <IconButton
+              className="hamburger-icon"
               size="large"
               onClick={() => {
                 handleOpen();
-              }}
-              sx={{
-                marginRight: "2rem"
               }}
             >
               <MenuIcon />
